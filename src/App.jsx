@@ -1,7 +1,7 @@
 import Header from "./components/Header"
 import List from "./components/List"
 import arrList from "./store/store.js"
-import Button from "./components/Button"
+import Button from "./components/Button/Button"
 
 
 export default function App() {
@@ -17,9 +17,10 @@ export default function App() {
             <List {...arrList[2]} />
           </ul>
         </section>
-        <section>
+        <section className="">
           <h3>Івенти</h3>
-          <Button />
+          <Button className="button me-2">Кнопка</Button>
+          <Button>Кнопулічка</Button>
         </section>
       </main>
     </div>
