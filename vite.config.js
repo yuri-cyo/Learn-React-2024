@@ -12,4 +12,10 @@ export default defineConfig({
       // додайте інші аліаси, які вам потрібні тут
     },
   },
-});
+  preprocessorOptions: {
+    scss: {
+      additionalData: `@import "@/styles.scss";`, // Додайте шлях до вашого основного файлу SCSS зі змінними
+    },
+  },
+},
+);
