@@ -6,8 +6,6 @@ export default function List({ title, description }) {
     description: PropTypes.string.isRequired,
   };
 
-  console.log(title, description)
-  
   return (
     <li className='border rounded p-2 mb-2'>
       <p className='col-2'>

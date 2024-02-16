@@ -1,3 +1,26 @@
-.button {
-    font-size: 24px;
+
+.button-clc {
+    // font-size: 32px;
+    background: #df1d51;
+    border-color: transparent;
+    &:hover {
+        background: #b81943;
+        border-color: transparent;
+    }
+}
+.button-clc2 {
+    // font-size: 32px;
+    background: #df1d51;
+    border-color: transparent;
+    &:hover {
+        background: #b81943;
+        border-color: transparent;
+    }
+}
+
+.activeBtn {
+    background: #bfbd44;
+    &:hover {
+        background: #a3a013;
+    }
 }
