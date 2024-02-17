@@ -7,10 +7,17 @@ export default function List({ title, description }) {
   };
 
   return (
-    <li className='border rounded p-2 mb-2'>
-      <p className='col-2'>
-        <strong>{title}</strong> {description}
-      </p>
-    </li>
+    // <li className='border rounded p-2 mb-2 card"'>
+    //   <p className=''>
+    //     <strong>{title}</strong> 
+    //     <p>{description}</p>
+    //   </p>
+    // </li>
+    <div className="card d-flex">
+      <div className="card-body card-size">
+        <h5 className="card-title">{title}</h5>
+        <p className="card-text">{description}</p>
+      </div>
+    </div>
   )
 }

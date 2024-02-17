@@ -10,7 +10,7 @@ export default function Button({children, className, onClick, isActive}) {
   };
   return (
   <button 
-    className={`btn btn-primary ${className ?? ''}${isActive ?? ''}`} 
+    className={`btn ${className ?? ''}${isActive ?? ''}`} 
     onClick={onClick}>
       {children}</button>
   )

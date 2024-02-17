@@ -14,16 +14,15 @@ export default function App() {
     setContentType(e.target.innerHTML)
   }
   return(
-    <div>
+    <div className="container">
       <Header />
       <main>
         <section>
           <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam ea esse totam magni, optio perspiciatis tempore voluptatem pariatur repellendus dolor labore temporibus dolore enim, incidunt aperiam nihil expedita sunt est.</h3>
-          <ul>
-            <List title={arrList[0].title} description={arrList[0].description} />
-            <List {...arrList[1]} />
-            <List {...arrList[2]} />
-          </ul>
+          <div className="d-flex gap-4 flex-wrap">
+            {arrList.map((card) => 
+              <List key={card.title} {...card}/>)}
+          </div>
         </section>
         <section className="">
           <h3>Івенти</h3>
@@ -33,11 +32,12 @@ export default function App() {
           <Button 
             isActive={contentType === 'Кнопка' ? 'activeBtn' : ''} 
             onClick={click} 
-            className="button-clc me-2 "
+            className="btn-success me-2 "
               >Кнопка</Button>
           <Button 
             isActive={contentType === 'Кнопулічка' ? 'activeBtn' : ''} 
             onClick={click}
+            className="btn-warning me-2 "
               >Кнопулічка</Button>
         </section>
       </main>
