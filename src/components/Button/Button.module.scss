@@ -1,11 +1,14 @@
 
-.button-clc {
+.buttonClc {
     // font-size: 32px;
-    background: #df1d51;
     // border-color: transparent;
     // border-color: transparent;
+    &:not(:last-child) {
+        
+        margin-right: 1rem;
+    }
     &:hover {
-        // background: #b81943;
+        color: #fff;
         // border-color: transparent;
     }
 }
@@ -20,8 +23,8 @@
 // }
 
 .activeBtn {
-    background: #bfbd44;
+    background: #4473bf;
     &:hover {
-        background: #a3a013;
+        background: #2c4c80;
     }
 }
