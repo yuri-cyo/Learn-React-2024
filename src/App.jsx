@@ -3,6 +3,7 @@ import SectionCards from "@/components/SectionCards"
 
 import SectionButtons from "@/components/SectionButtons"
 import ImputSection from "@/components/ImputSection"
+import EffectSection from "@/components/EffectSection"
 // import { Fragment } from "react" анаог обгортки <></>
 
 
@@ -17,8 +18,9 @@ export default function App() {
         <main>
           <SectionCards />
           <SectionButtons />
-          <ImputSection />
         </main>
+          <ImputSection />
+        <EffectSection></EffectSection>
       </div>
     {/* </Fragment> */}
     </>
