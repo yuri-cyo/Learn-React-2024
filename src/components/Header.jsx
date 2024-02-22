@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import logo from '@/assets/react.svg'
 import styled from 'styled-components'
 import Button from '@/components/Button/Button.jsx'
@@ -16,6 +16,17 @@ const HeadesStyle = styled.header`
 `
 
 export default function Header() {
+    const [now, setNow] = useState(new Date())
+    
+    useEffect(()=> {
+        const interval = setInterval(() => {
+            setNow(new Date())
+            console.log(new Date().toLocaleTimeString());
+        }, 1000);
+        return () => {
+            clearInterval(interval)
+        }
+    }, [])
 
     const [isTab, setIsTab] = useState('')
 
@@ -25,10 +36,10 @@ export default function Header() {
 
     return(
         <HeadesStyle style={{flexDirection: 'column'}}>
-           <div style={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+           <div style={{display: 'flex', alignItems: 'center', gap: '20px'}}>
                 <img src={logo} alt="Logo"/>
                 <h1>Header</h1>
-                <span>Дата: { new Date().toLocaleDateString() } </span>
+                <span>Час: {now.toLocaleTimeString()} </span>
            </div>
            <div>
             <Button

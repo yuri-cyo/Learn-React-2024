@@ -1,9 +1,29 @@
+import {useRef, useEffect} from 'react'
 import PropTypes from 'react'
+import { createPortal } from "react-dom"
+import '@/components/Modal/Modal.scss'
 
-export default function Modal({children}) {
+export default function Modal({children, open}) {
+
+  const dialog = useRef()
+
+  useEffect(()=> {
+    if (open) {
+    dialog.current.showModal()
+  } else {
+    dialog.current.close()
+  }
+  }, [open])
 
   Modal.propTypes = {
-    children: PropTypes.node // Валідація для 
+    children: PropTypes.node,
+    open:  PropTypes.node// Валідація для 
   };
-  return <dialog open>{children}</dialog>
+
+  
+
+  return createPortal(
+      <dialog ref={dialog}>{children}</dialog>,
+      document.getElementById('modal')
+    )
 }

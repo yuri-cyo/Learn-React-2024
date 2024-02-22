@@ -1,4 +1,4 @@
-import Button from "@/components/Button/Button.jsx"
+// import Button from "@/components/Button/Button.jsx"
 import { useState, useRef } from "react"
 export default function ImputSection() {
   const inp = useRef()
@@ -45,9 +45,9 @@ export default function ImputSection() {
         <option value="3">Опція 3</option>
       </select>
       <div className="mt-3">
-        <Button 
+        {/* <Button 
         // disabled={hasError} isActive={!hasError} 
-        className="btn-success">Вибрати</Button>
+        className="btn-success">Вибрати</Button> */}
       </div>
       <div>
         {/* <p>{name}</p> */}
