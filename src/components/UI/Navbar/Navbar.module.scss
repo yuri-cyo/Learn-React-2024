@@ -1,0 +1,61 @@
+.menu__list {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: .125rem;
+  gap: 1.25rem;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; 
+    border-radius: 100vh;
+    gap: 1.25rem;
+    border: .125rem solid $dark-bg-items;
+    padding: .125rem;
+    background-color: $dark-bg;
+  }
+  &__item {
+    min-width: 110px;
+    border: 2px solid transparent;
+    border-radius: 100vh;
+    transition: all 0.2s ease 0s;
+    a {
+      transition: all 0.2s ease 0s;
+      position: relative;
+      z-index: 100;
+    }
+    &:hover {
+      border: 2px solid $dark-bg-items;
+      transition: all 0.2s ease 0s;
+      a {
+        transition: all 0.2s ease 0s;
+        color: $mark-color;
+      }
+    }
+  }
+}
+
+.navActive a{
+  border-color: $dark-bg-items;
+  &::after {
+    content: '';
+    position: absolute;
+
+    left: calc(50%); //* 1 Home
+    // left: calc(50% + 100% + 1.25rem + 4px); //* 2 About Me
+    // left: calc(50% + 200% + (1.25rem * 2) + (4px * 2)); //* 3 Education
+    // left: calc(50% + 300% + (1.25rem * 3) + (4px * 3)); //* 4 Portfolio
+    // left: calc(50% + 400% + (1.25rem * 4) + (4px * 4)); //* 5 Contact Me
+
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height:100%;
+    border-radius: 100vh;
+    background-color: $dark-bg-items;
+    z-index: -1;
+    border: 2px solid $dark-bg-items;
+
+
+  }
+}

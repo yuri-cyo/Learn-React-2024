@@ -1,13 +1,25 @@
-*, li, ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+@import '@/styles/variables.scss';
+
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,regular,700,900);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+3:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+// @import '@/vars.scss';
+
+
+
 
 body {
-  // background-color: #f0f0f0;
+  font-family: "Source Sans 3";
+  background-color: $dark-bg;
+  background-image: url('@/assets/images/dot-fone.svg');
+  font-size: $primary-fs;
+  color: $color-text;
 }
 
-.card-size {
-  width: 300px;
+.container {
+  max-width: $desktop;
+  margin: 0 auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
 }
+

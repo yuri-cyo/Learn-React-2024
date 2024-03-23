@@ -1,0 +1,18 @@
+//! === breakpoints ===
+$container-padding: 15px;
+$desktop: 940px + ($container-padding * 2);
+$tablet: 768px;
+$mobile: 480px;
+
+//! === background ===
+$dark-bg: hsl(0, 0%, 8%);
+$dark-bg-items: hsl(0, 0%, 16%);
+
+//! === text color ===
+$color-text-menu: hsl(0, 0%, 82%);
+$color-text: hsl(0, 0%, 93%);
+$mark-color: hsl(147, 100%, 30%);
+
+//! === text sizes ===
+$primary-fs: .8125rem;
+$btn-fs: 1rem;

@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: .625rem;
+  img {
+    width: 40px;
+    border-radius: 100vh;
+  }
+  // &__name__container span {
+  //   display: block;
+  //   text-align: center;
+  // }
+  span {
+    font-size: $btn-fs * 1.6;
+    white-space: nowrap;
+    // text-transform: uppercase;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,12 @@
+.menu__btn {
+  display: block;
+  text-align: center;
+  width: 100%;
+  line-height: 200%;
+  border-radius: 100vh;
+  // background-color: $dark-bg-items;
+  color: $color-text-menu;
+  white-space: nowrap;
+  font-size: $btn-fs;
+  cursor: pointer;
+}
